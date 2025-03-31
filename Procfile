@@ -1,1 +1,1 @@
-web: gunicorn miweb.wsgi:application
+web: gunicorn miweb.wsgi
