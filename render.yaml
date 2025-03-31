@@ -1,11 +1,9 @@
 services:
   - type: web
     name: silviagro
-    env: python
+    runtime: python
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn miweb.wsgi
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: miweb.settings
-      - key: PYTHON_VERSION
-        value: 3.10
