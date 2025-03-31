@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Silviagro S.A.S.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <style>
+    /* Animaciones personalizadas para entrada y salida */
+    [data-aos="fade-slide-up"] {
+      opacity: 0;
+      transform: translateY(30px);
+      transition-property: transform, opacity;
+    }
+    [data-aos="fade-slide-up"].aos-animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    [data-aos="fade-slide-down"] {
+      opacity: 0;
+      transform: translateY(-30px);
+      transition-property: transform, opacity;
+    }
+    [data-aos="fade-slide-down"].aos-animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    [data-aos="fade-slide-left"] {
+      opacity: 0;
+      transform: translateX(30px);
+      transition-property: transform, opacity;
+    }
+    [data-aos="fade-slide-left"].aos-animate {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    [data-aos="fade-slide-right"] {
+      opacity: 0;
+      transform: translateX(-30px);
+      transition-property: transform, opacity;
+    }
+    [data-aos="fade-slide-right"].aos-animate {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+    /* Animación para el título principal */
+    @keyframes pulse-glow {
+      0% { text-shadow: 0 0 5px rgba(74, 222, 128, 0.5); }
+      50% { text-shadow: 0 0 20px rgba(74, 222, 128, 0.8); }
+      100% { text-shadow: 0 0 5px rgba(74, 222, 128, 0.5); }
+    }
+    .animate-pulse-glow {
+      animation: pulse-glow 3s infinite;
+    }
+  </style>
+</head>
+<body class="scroll-smooth bg-white text-gray-800 font-sans">
+
+<header class="bg-white shadow-md fixed top-0 left-0 w-full z-50 animate__animated animate__fadeInDown">
+  <nav class="container mx-auto px-4 py-0 flex justify-between items-center">
+    <h1 class="text-xl font-bold text-green-800 animate__animated animate__pulse animate__infinite">SILVIAGRO S.A.S.</h1>
+    <button id="menu-toggle" class="md:hidden text-green-800 focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+    <ul id="menu" class="hidden md:flex md:space-x-8 flex-col md:flex-row absolute md:static top-16 left-0 w-full md:w-auto bg-white md:bg-transparent text-green-900 font-medium shadow-md md:shadow-none animate__animated animate__fadeInDown animate__delay-1s">
+      <li><a href="#inicio" class="block px-6 py-3 hover:text-green-700 transition-colors duration-300">Inicio</a></li>
+      <li><a href="#quehacemos" class="block px-6 py-3 hover:text-green-700 transition-colors duration-300">¿Qué hacemos?</a></li>
+      <li><a href="#nosotros" class="block px-6 py-3 hover:text-green-700 transition-colors duration-300">Nosotros</a></li>
+      <li><a href="#servicios" class="block px-6 py-3 hover:text-green-700 transition-colors duration-300">Servicios</a></li>
+      <li><a href="#contacto" class="block px-6 py-3 hover:text-green-700 transition-colors duration-300">Contacto</a></li>
+    </ul>    
+  </nav>
+</header>
+
+<div class="h-20"></div>
+<section id="inicio" class="h-screen bg-cover bg-center flex items-center justify-center" style="background-image: url('/media/galeria/30.jpeg');">
+  <div class="bg-black bg-opacity-50 p-6 md:p-10 rounded-xl text-center animate__animated animate__zoomIn mx-4" data-aos="zoom-in" data-aos-duration="1000">
+    <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-green-500 via-lime-400 to-emerald-500 text-transparent bg-clip-text animate-pulse-glow">
+      BIENVENIDO A SILVIAGRO
+    </h1>
+  </div>
+</section>
+
+<section id="quehacemos" class="py-10 px-4 sm:px-6 md:px-10 bg-green-100">
+  <div class="container mx-auto" data-aos="fade-slide-up" data-aos-duration="800" data-aos-offset="200">
+    <h2 class="text-2xl md:text-3xl font-bold mb-4 text-center text-green-800 animate__animated animate__pulse animate__infinite">¿Qué hacemos?</h2>
+    <p class="text-base md:text-lg max-w-3xl mx-auto text-center text-green-900" data-aos="fade-slide-up" data-aos-delay="200">
+      En Silviagro trabajamos con comunidades rurales para proteger los bosques, mejorar la calidad del agua y fomentar la sostenibilidad a través de servicios ecosistémicos.
+    </p>
+  </div>
+</section>
+
+<section id="nosotros" class="py-10 px-4 sm:px-6 md:px-10 bg-white">
+  <div class="container mx-auto max-w-4xl">
+    <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center text-green-800" data-aos="fade-slide-down">Sobre Nosotros</h2>
+    <div class="text-green-900 text-base md:text-lg space-y-6">
+      <div data-aos="fade-slide-right" data-aos-delay="100">
+        <h3 class="text-xl md:text-2xl font-semibold text-green-800 mb-2">Nuestra Historia</h3>
+        <p>
+          Silviagro S.A.S. nace con el propósito de impulsar el desarrollo sostenible en zonas rurales a través de servicios ecosistémicos,
+          protección ambiental y fortalecimiento productivo con las comunidades.
+        </p>
+      </div>
+      <div data-aos="fade-slide-left" data-aos-delay="200">
+        <h3 class="text-xl md:text-2xl font-semibold text-green-800 mb-2">Misión</h3>
+        <p>
+          Contribuir al bienestar ambiental y social mediante la implementación de prácticas silviculturales, agropecuarias y de valoración territorial
+          que generen impacto positivo en el medio ambiente y las comunidades.
+        </p>
+      </div>
+      <div data-aos="fade-slide-right" data-aos-delay="300">
+        <h3 class="text-xl md:text-2xl font-semibold text-green-800 mb-2">Visión</h3>
+        <p>
+          Ser líderes en Colombia en soluciones ambientales sostenibles, reconocidos por nuestra innovación, impacto y compromiso con el desarrollo rural.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="servicios" class="py-10 px-4 sm:px-6 md:px-10 bg-green-50 scroll-mt-28">
+  <div class="container mx-auto">
+    <h2 class="text-2xl md:text-3xl font-bold text-center text-green-800 mb-8 md:mb-10" data-aos="fade-slide-up">Nuestros Servicios</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
+      <div class="h-64 md:h-80 lg:h-96 bg-cover bg-center rounded-xl md:rounded-2xl shadow-lg border border-green-200 hover:shadow-xl transition duration-300 flex flex-col justify-center p-4 md:p-6" style="background-image: url('/media/galeria/4.jpeg');" data-aos="fade-slide-right" data-aos-delay="100">
+        <div class="bg-black bg-opacity-60 p-4 md:p-6 rounded-lg transform transition duration-500 hover:scale-105">
+          <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Servicios Silviculturales</h3>
+          <p class="text-sm md:text-base text-white">
+            Siembra, poda, tala, traslado y tratamientos de árboles. También mantenimiento de jardines y corte de césped.
+          </p>
+        </div>
+      </div>
+      <div class="h-64 md:h-80 lg:h-96 bg-cover bg-center rounded-xl md:rounded-2xl shadow-lg border border-green-200 hover:shadow-xl transition duration-300 flex flex-col justify-center p-4 md:p-6" style="background-image: url('/media/galeria/10.jpeg');" data-aos="fade-slide-left" data-aos-delay="200">
+        <div class="bg-black bg-opacity-60 p-4 md:p-6 rounded-lg transform transition duration-500 hover:scale-105">
+          <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Servicios Agropecuarios</h3>
+          <p class="text-sm md:text-base text-white">
+            Producción, transformación, exportación, importación y comercialización de productos agrícolas y pecuarios.
+          </p>
+        </div>
+      </div>
+      <div class="h-64 md:h-80 lg:h-96 bg-cover bg-center rounded-xl md:rounded-2xl shadow-lg border border-green-200 hover:shadow-xl transition duration-300 flex flex-col justify-center p-4 md:p-6" style="background-image: url('/media/galeria/21.jpeg');" data-aos="fade-slide-right" data-aos-delay="300">
+        <div class="bg-black bg-opacity-60 p-4 md:p-6 rounded-lg transform transition duration-500 hover:scale-105">
+          <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Avalúos Rurales y Urbanos</h3>
+          <p class="text-sm md:text-base text-white">
+            Avalúos técnicos, económicos y legales de predios, aplicando normativas vigentes.
+          </p>
+        </div>
+      </div>
+      <div class="h-64 md:h-80 lg:h-96 bg-cover bg-center rounded-xl md:rounded-2xl shadow-lg border border-green-200 hover:shadow-xl transition duration-300 flex flex-col justify-center p-4 md:p-6" style="background-image: url('/media/galeria/28.jpeg');" data-aos="fade-slide-left" data-aos-delay="400">
+        <div class="bg-black bg-opacity-60 p-4 md:p-6 rounded-lg transform transition duration-500 hover:scale-105">
+          <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Servicios Complementarios</h3>
+          <p class="text-sm md:text-base text-white">
+            Actividades conexas o complementarias que faciliten el desarrollo comercial y legal de nuestras operaciones.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="pt-20 pb-16 px-4 sm:px-6 md:px-10 bg-green-950 text-white">
+  <div class="container mx-auto">
+    <h2 class="text-2xl md:text-3xl font-bold mb-10 md:mb-14 text-center" data-aos="fade-slide-down">Contáctanos</h2>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16 max-w-6xl mx-auto">
+      <!-- Columna izquierda: Información de contacto -->
+      <div class="space-y-4 md:space-y-6 flex flex-col justify-center" data-aos="fade-slide-right" data-aos-delay="100">
+        <h3 class="text-lg md:text-xl font-semibold">Información de contacto</h3>
+        <p class="flex items-center gap-2 text-sm md:text-base">
+          <svg class="w-5 h-5 text-lime-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 10l1.664 6.657A2 2 0 006.6 18h10.8a2 2 0 001.936-1.343L21 10m-9 4v-4m0 4v4m0-4H9m3 0h3" />
+          </svg>
+          <span>310 739 1584 / 316 531 9026</span>
+        </p>
+        <p class="flex items-center gap-2 text-sm md:text-base">
+          <svg class="w-5 h-5 text-lime-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16 12a4 4 0 01-8 0m8 0V8a4 4 0 00-8 0v4m8 0h-8" />
+          </svg>
+          <a href="mailto:silviagrosascol@gmail.com" class="text-lime-400 hover:underline">silviagrosascol@gmail.com</a>
+        </p>
+        <p class="flex items-center gap-2 text-sm md:text-base">
+          <svg class="w-5 h-5 text-lime-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 12.414m0 0L9.172 8.172m4.243 4.243a4 4 0 105.656-5.656 4 4 0 00-5.656 5.656z" />
+          </svg>
+          <span>Calle 19 #3-10 oficina 701, Bogotá</span>
+        </p>
+      </div>
+
+      <!-- Columna central: Mapa -->
+      <div class="flex items-center justify-center" data-aos="zoom-in" data-aos-delay="200">
+        <iframe class="w-full h-64 md:h-72 rounded-lg shadow-md transform transition duration-500 hover:scale-105" loading="lazy" allowfullscreen src="https://www.google.com/maps?q=Calle+19+%233-10+Bogot%C3%A1+Colombia&output=embed"></iframe>
+      </div>
+
+      <!-- Columna derecha: Formulario (VERSIÓN SIMPLE CON MAILTO) -->
+      <form action="mailto:silviagrosascol@gmail.com" method="post" enctype="text/plain" class="space-y-3 md:space-y-4" data-aos="fade-slide-left" data-aos-delay="300">
+        <input type="text" name="nombre" placeholder="Nombre" class="w-full p-2 md:p-3 border rounded-md text-black focus:outline-none focus:ring-2 focus:ring-lime-400 text-sm md:text-base" required>
+        
+        <input type="email" name="email" placeholder="Correo electrónico" class="w-full p-2 md:p-3 border rounded-md text-black focus:outline-none focus:ring-2 focus:ring-lime-400 text-sm md:text-base" required>
+        
+        <textarea name="mensaje" placeholder="Mensaje" rows="4" class="w-full p-2 md:p-3 border rounded-md text-black focus:outline-none focus:ring-2 focus:ring-lime-400 text-sm md:text-base" required></textarea>
+        
+        <button type="submit" class="w-full bg-gradient-to-r from-lime-500 to-green-600 text-white px-4 py-2 md:px-6 md:py-3 rounded-md hover:from-lime-400 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl text-sm md:text-base">
+          Enviar mensaje
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<a href="#inicio" class="fixed bottom-20 left-4 md:left-6 bg-gradient-to-br from-green-500 via-lime-400 to-green-700 text-white p-3 md:p-4 rounded-full shadow-2xl hover:shadow-green-500/50 transition-all duration-300 hover:scale-110 z-50 animate-bounce" title="Ir arriba">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-7 md:w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+  </svg>
+</a>
+
+<a href="https://wa.me/573107391584" target="_blank"
+   class="fixed bottom-20 right-4 md:right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl z-50 transition-all duration-300 hover:scale-110"
+   title="Chatea por WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-7 md:w-7" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 0C5.372 0 0 5.373 0 12c0 2.121.553 4.154 1.6 5.962L0 24l6.174-1.576C8.085 23.448 10.034 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm.002 21.503c-1.658 0-3.29-.429-4.726-1.234l-.339-.193-3.666.935.975-3.569-.218-.367C3.262 15.635 2.761 13.85 2.761 12c0-5.09 4.148-9.239 9.24-9.239 2.472 0 4.794.962 6.538 2.707s2.707 4.065 2.707 6.538c0 5.092-4.15 9.24-9.244 9.24zM16.52 13.94c-.25-.125-1.475-.727-1.704-.81-.228-.083-.395-.125-.562.125s-.645.81-.79.978c-.145.166-.29.187-.54.063-.25-.125-1.054-.388-2.008-1.237-.742-.66-1.243-1.476-1.39-1.726-.145-.25-.016-.384.108-.51.111-.11.25-.29.374-.437.125-.145.166-.25.25-.416.083-.166.042-.312-.02-.437-.062-.125-.562-1.35-.77-1.85-.208-.5-.42-.437-.562-.445l-.479-.01c-.166 0-.437.063-.666.312s-.875.854-.875 2.084.896 2.419 1.021 2.587c.125.166 1.763 2.698 4.276 3.782.597.257 1.063.41 1.425.524.6.19 1.145.163 1.577.099.48-.072 1.475-.604 1.683-1.187.208-.584.208-1.084.145-1.187-.062-.104-.229-.167-.479-.292z"/>
+  </svg>
+</a>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  // Inicializar AOS con configuración mejorada
+  document.addEventListener('DOMContentLoaded', function() {
+    if (window.innerWidth > 768) {
+      AOS.init({
+        duration: 800,
+        offset: 120,
+        delay: 100,
+        once: false, // Las animaciones se repiten al hacer scroll
+        mirror: true, // Los elementos se animan al entrar y salir
+        easing: 'ease-in-out',
+        anchorPlacement: 'top-bottom'
+      });
+    }
+    
+    // Menú móvil
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+      menu.classList.toggle('animate__fadeInDown');
+    });
+    
+    // Cerrar menú al hacer clic en un enlace
+    const menuLinks = document.querySelectorAll('#menu a');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth < 768) {
+          menu.classList.add('hidden');
+        }
+      });
+    });
+    
+    // Efecto parallax para la sección de inicio
+    const inicioSection = document.getElementById('inicio');
+    if (inicioSection) {
+      window.addEventListener('scroll', function() {
+        const scrollPosition = window.pageYOffset;
+        inicioSection.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
