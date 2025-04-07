@@ -447,8 +447,23 @@
       </div>
 
       <!-- Columna derecha: espacio reservado para redes sociales -->
-      </div>
-
+      <div class="formulario-contacto" style="max-width: 500px; margin: 20px auto;">
+        <h3 style="color: white;">Envíanos un mensaje</h3>
+        <form action="mailto:silviagrosascol@gmail.com" method="POST" enctype="text/plain">
+            <input type="text" name="Nombre" placeholder="Tu nombre" required
+                   style="width: 100%; margin-bottom: 10px; padding: 8px; color: black;">
+            <input type="email" name="Correo" placeholder="Tu correo electrónico" required
+                   style="width: 100%; margin-bottom: 10px; padding: 8px; color: black;">
+            <input type="tel" name="Teléfono" placeholder="Tu número de teléfono" required
+                   style="width: 100%; margin-bottom: 10px; padding: 8px; color: black;">
+            <textarea name="Mensaje" rows="5" placeholder="Tu mensaje" required
+                      style="width: 100%; margin-bottom: 10px; padding: 8px; color: black;"></textarea>
+            <button type="submit"
+                    style="padding: 10px 20px; background: #007bff; color: white; border: none; cursor: pointer;">
+                Enviar mensaje
+            </button>
+        </form>
+    </div>    
   </div>
 </section>
 

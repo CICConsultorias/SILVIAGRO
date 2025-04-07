@@ -95,14 +95,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Media files
 MEDIA_URL = '/media/'
-# Media files
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Corrige esta parte con os.path.join
 
-# Email Configuration (NEW)
+# Email Configuration (ACTUALIZAR CON TU CONTRASEÑA DE APLICACIÓN)
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'silviagrosascol@gmail.com'  # Cambiar por tu correo
-EMAIL_HOST_PASSWORD = 'tu_contraseña_de_aplicación'  # Usar contraseña de aplicación
+EMAIL_HOST_USER = 'works0123456789@gmail.com'
+EMAIL_HOST_PASSWORD = 'AQUI_VA_TU_CONTRASEÑA_DE_APLICACIÓN'  # ← Reemplaza esto con tu contraseña de aplicación de Gmail
