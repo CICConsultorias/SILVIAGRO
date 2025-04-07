@@ -1,9 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Silviagro S.A.S.</title>
+  <title>Silviagro S.A.S.</title> 
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -105,6 +106,44 @@
 
     header {
       margin-bottom: 0 !important;
+    }
+
+    /* Estilos nuevos para el carrusel de papaya */
+    #papayaCarousel {
+  max-width: 800px;
+  margin: 0 auto;
+      height: 400px;
+      width: 800px; /* <-- Aumentamos el ancho */
+      margin: 0 auto; /* <-- Centramos horizontalmente */
+    }    
+    #papayaCarousel .carousel-inner, 
+    #papayaCarousel .carousel-item {
+      height: 100%;
+    }
+    #papayaCarousel img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+    #papayaCarousel .carousel-control-prev,
+    #papayaCarousel .carousel-control-next {
+      width: 40px;
+      height: 40px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 50%;
+    }
+    #papayaCarousel .carousel-control-prev {
+      left: 15px;
+    }
+    #papayaCarousel .carousel-control-next {
+      right: 15px;
+    }
+    #papayaCarousel .carousel-control-prev-icon,
+    #papayaCarousel .carousel-control-next-icon {
+      width: 20px;
+      height: 20px;
     }
   </style>
 </head>
@@ -312,27 +351,46 @@
   </div>
 </section>
 
-<!-- NUEVA SECCIÓN DE PRODUCTOS - PAPAYA PREMIUM -->
+<!-- SECCIÓN DE PRODUCTOS MODIFICADA CON CARRUSEL -->
 <section id="productos" class="py-16 px-4 sm:px-6 md:px-10 bg-gradient-to-b from-lime-100 to-green-100">
   <div class="container mx-auto max-w-6xl">
-    <div class="text-center mb-12" data-aos="fade-down">
+    <div class="text-center mb-12 mt-8" data-aos="fade-down">
       <h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-4">Nuestra Papaya Premium</h2>
       <div class="w-20 h-1 bg-green-600 mx-auto"></div>
     </div>
     
     <div class="grid md:grid-cols-2 gap-10 items-center">
-      <!-- Columna izquierda: Imagen -->
-      <div class="relative overflow-hidden rounded-2xl shadow-xl" data-aos="fade-right">
-        <img src="/media/galeria/papaya-premium.jpg" alt="Papaya Premium Silviagro" class="w-full h-auto object-cover transform hover:scale-105 transition duration-500">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent flex items-end p-6">
-          <span class="text-white font-medium text-lg">Cultivada con técnicas sostenibles</span>
+      <!-- Columna izquierda: Carrusel de imágenes - Modificado para mejor centrado -->
+      <div class="relative flex justify-center" data-aos="fade-right"> <!-- Añadido flex justify-center -->
+        <div id="papayaCarousel" class="carousel slide rounded-2xl shadow-xl overflow-hidden w-full max-w-md" data-bs-ride="carousel"> <!-- Añadido max-w-md -->
+          <div class="carousel-inner aspect-[4/3]"> <!-- Añadido aspect ratio 4:3 -->
+            <!-- Imágenes del carrusel -->
+            <div class="carousel-item active h-full">
+              <img src="/media/galeria/papaya1.jpg" class="d-block w-full h-full object-cover" alt="Papaya Premium 1"> <!-- Añadido object-cover -->
+            </div>
+            <div class="carousel-item h-full">
+              <img src="/media/galeria/papaya2.jpg" class="d-block w-full h-full object-cover" alt="Papaya Premium 2">
+            </div>
+            <div class="carousel-item h-full">
+              <img src="/media/galeria/papaya3.jpg" class="d-block w-full h-full object-cover" alt="Papaya Premium 3">
+            </div>
+            <!-- Agrega más imágenes si lo necesitas -->
+          </div>
+          <!-- Controles del carrusel - Mejorados visualmente -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#papayaCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bg-green-800/80 hover:bg-green-700 rounded-full p-3 transition-colors duration-200" aria-hidden="true"></span> <!-- Mejorado hover -->
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#papayaCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon bg-green-800/80 hover:bg-green-700 rounded-full p-3 transition-colors duration-200" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
       </div>
       
       <!-- Columna derecha: Texto descriptivo -->
       <div class="space-y-6" data-aos="fade-left">
         <h3 class="text-2xl md:text-3xl font-bold text-green-800">La Mejor Papaya de Colombia</h3>
-        
         <div class="space-y-4 text-green-900">
           <p class="flex items-start">
             <svg class="w-6 h-6 text-green-600 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -340,14 +398,12 @@
             </svg>
             <span>Distribuida a cadenas líderes como <strong>Éxito</strong> y <strong>Olímpica</strong>, reconocida por su tamaño excepcional, frescura impecable y sabor exquisito.</span>
           </p>
-          
           <p class="flex items-start">
             <svg class="w-6 h-6 text-green-600 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
             </svg>
             <span><strong>Técnicas innovadoras:</strong> Aprovechamiento forestal sostenible que transforma áreas deforestadas en cultivos altamente productivos.</span>
           </p>
-          
           <p class="flex items-start">
             <svg class="w-6 h-6 text-green-600 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
@@ -355,12 +411,10 @@
             <span><strong>Diferencial competitivo:</strong> Papayas más grandes, limpias y sabrosas que las convencionales, cultivadas bajo estándares rigurosos.</span>
           </p>
         </div>
-        
         <div class="bg-green-800/10 p-4 rounded-lg border border-green-800/20">
           <h4 class="font-bold text-green-800 mb-2">Impacto Social y Ambiental</h4>
           <p class="text-green-900">Cada compra apoya nuestro trabajo con <strong>150 familias rurales</strong> y proyectos de <strong>reforestación y protección de fuentes hídricas</strong>.</p>
         </div>
-        
         <div class="flex flex-wrap gap-4 pt-2">
           <a href="#contacto" class="px-6 py-3 bg-gradient-to-r from-green-600 to-lime-500 text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-all hover:from-green-700 hover:to-lime-600">
             Solicitar Cotización
@@ -377,7 +431,7 @@
 <section id="servicios" class="py-10 px-4 sm:px-6 md:px-10 bg-green-50 scroll-mt-28">
   <div class="container mx-auto">
     <h2 class="text-2xl md:text-3xl font-bold text-center text-green-800 mb-8 md:mb-10" data-aos="fade-slide-up">Nuestros Servicios</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
+    <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-8 items-center">
       <div class="h-64 md:h-80 lg:h-96 bg-cover bg-center rounded-xl md:rounded-2xl shadow-lg border border-green-200 hover:shadow-xl transition duration-300 flex flex-col justify-center p-4 md:p-6" style="background-image: url('/media/galeria/Servicios Silviculturales.jpeg');" data-aos="fade-slide-right" data-aos-delay="100">
         <div class="bg-black bg-opacity-60 p-4 md:p-6 rounded-lg transform transition duration-500 hover:scale-105">
           <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Servicios Silviculturales</h3>
@@ -448,7 +502,7 @@
 
       <!-- Columna derecha: espacio reservado para redes sociales -->
       <div class="formulario-contacto" style="max-width: 500px; margin: 20px auto;">
-        <h3 style="color: white;">Envíanos un mensaje</h3>
+        <h3 style="color: rgb(12, 179, 0);">Envíanos un mensaje</h3>
         <form action="mailto:silviagrosascol@gmail.com" method="POST" enctype="text/plain">
             <input type="text" name="Nombre" placeholder="Tu nombre" required
                    style="width: 100%; margin-bottom: 10px; padding: 8px; color: black;">
@@ -457,9 +511,9 @@
             <input type="tel" name="Teléfono" placeholder="Tu número de teléfono" required
                    style="width: 100%; margin-bottom: 10px; padding: 8px; color: black;">
             <textarea name="Mensaje" rows="5" placeholder="Tu mensaje" required
-                      style="width: 100%; margin-bottom: 10px; padding: 8px; color: black;"></textarea>
+                   style="width: 100%; margin-bottom: 10px; padding: 8px; color: black;"></textarea>
             <button type="submit"
-                    style="padding: 10px 20px; background: #007bff; color: white; border: none; cursor: pointer;">
+                   style="padding: 10px 20px; background: #007bff; color: white; border: none; cursor: pointer;">
                 Enviar mensaje
             </button>
         </form>
