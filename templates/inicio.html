@@ -160,6 +160,14 @@
     <a href="#inicio">
       <img src="/media/galeria/logo.png" alt="Logo Silviagro" class="logo-floating animate__animated animate__pulse animate__infinite">
     </a>
+    
+    <button id="menu-toggle" class="md:hidden text-green-800 focus:outline-none mr-4">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+
     <nav>
       <ul class="flex space-x-8 text-green-900 font-semibold text-sm">
         <li><a href="#inicio" class="hover:text-green-600">Inicio</a></li>
@@ -170,6 +178,18 @@
         <li><a href="#contacto" class="hover:text-green-600">Contacto</a></li>
       </ul>
     </nav>
+
+    <div id="menu" class="md:hidden absolute top-full right-0 bg-white shadow-md w-full z-40 hidden animate__animated">
+      <ul class="flex flex-col text-green-900 font-semibold text-sm p-4 space-y-2">
+        <li><a href="#inicio" class="hover:text-green-600">Inicio</a></li>
+        <li><a href="#quehacemos" class="hover:text-green-600">¿Qué hacemos?</a></li>
+        <li><a href="#nosotros" class="hover:text-green-600">Nosotros</a></li>
+        <li><a href="#productos" class="hover:text-green-600">Producto</a></li>
+        <li><a href="#servicios" class="hover:text-green-600">Servicios</a></li>
+        <li><a href="#contacto" class="hover:text-green-600">Contacto</a></li>
+      </ul>
+    </div>
+
   </header>  
     <!-- SCRIPT PARA EFECTO SCROLL -->
     <script>
@@ -321,7 +341,7 @@
 </section>
 
 <section id="quehacemos" class="pt-32 -mt-32 px-4 sm:px-6 md:px-10 bg-green-100 scroll-mt-24">
-  <div class="container mx-auto" data-aos="fade-slide-up" data-aos-duration="800" data-aos-offset="200">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-slide-up" data-aos-duration="800" data-aos-offset="200">
     <h2 class="text-2xl md:text-3xl font-bold mb-4 text-center text-green-800 animate__animated animate__pulse animate__infinite">¿Qué hacemos?</h2>
     <p class="text-base md:text-lg max-w-3xl mx-auto text-center text-green-900" data-aos="fade-slide-up" data-aos-delay="200">
       En Silviagro trabajamos con comunidades rurales para proteger los bosques, mejorar la calidad del agua y fomentar la sostenibilidad a través de servicios ecosistémicos.
@@ -358,13 +378,13 @@
 
 <!-- SECCIÓN DE PRODUCTOS MODIFICADA CON CARRUSEL -->
 <section id="productos" class="py-16 px-4 sm:px-6 md:px-10 bg-gradient-to-b from-lime-100 to-green-100 scroll-mt-24">
-  <div class="w-full px-4">
+  <div class="w-full px-4 sm:px-6 md:px-10">
     <div class="text-center mb-12 mt-8" data-aos="fade-down">
       <h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-4">Nuestra Papaya Premium</h2>
       <div class="w-20 h-1 bg-green-600 mx-auto"></div>
     </div>
     
-    <div class="grid md:grid-cols-2 gap-10 items-center">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
       <!-- Columna izquierda: Carrusel de imágenes - Modificado para mejor centrado -->
       <div class="relative flex justify-center" data-aos="fade-right"> <!-- Añadido flex justify-center -->
         <div id="papayaCarousel" class="carousel slide rounded-2xl shadow-xl overflow-hidden w-full max-w-md" data-bs-ride="carousel" data-bs-interval="3000">
@@ -449,7 +469,7 @@
 </section>
 
 <section id="servicios" class="py-10 px-4 sm:px-6 md:px-10 bg-green-50 scroll-mt-28">
-  <div class="container mx-auto">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <h2 class="text-2xl md:text-3xl font-bold text-center text-green-800 mb-8 md:mb-10" data-aos="fade-slide-up">Nuestros Servicios</h2>
     
     <!-- Contenedor general con 2 columnas en pantallas grandes -->
@@ -499,8 +519,8 @@
   </div>
 </section>
 
-<section id="contacto" class="pt-20 pb-16 px-4 sm:px-6 md:px-10 bg-green-950 text-white">
-  <div class="container mx-auto">
+<section id="contacto" class="pt-20 pb-16 px-4 sm:px-6 md:px-10 bg-green-950 text-white scroll-mt-24">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <h2 class="text-2xl md:text-3xl font-bold mb-10 md:mb-14 text-center" data-aos="fade-slide-down">Contáctanos</h2>
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16 max-w-6xl mx-auto">
       <!-- Columna izquierda: Información de contacto -->
